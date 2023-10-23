@@ -1,0 +1,61 @@
+.container {
+  position: relative;
+}
+
+.mat_content {
+  display: flex;
+  padding: 20px;
+}
+
+.title {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.check_label {
+  margin-left: 50px;
+  margin-top: 50px;
+  color: rgb(31, 197, 67);
+}
+
+.index_values {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+#save {
+  top: 20%;
+  left: 20%;
+  margin-top: 0.5%;
+}
+
+#deiktis {
+  top: 20%;
+  margin-left: 10%;
+}
+
+#varos {
+  top: 20%;
+  margin-left: 10%;
+}
+
+#oria {
+  top: 20%;
+  margin-left: 10%;
+}
+
+.check_label {
+  top: 20%;
+  margin-left: 10%;
+}
+.red_snackbar {
+  background: red !important;
+  color: white;
+}
+
+.blue_snackbar {
+  background: blue;
+  color: white;
+}

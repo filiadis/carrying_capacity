@@ -1,0 +1,49 @@
+.btn {
+  position: fixed;
+  top: 1%;
+  bottom: 95%;
+  right: 2%;
+  width: 110px;
+  height: 3%;
+  font-size: 0.8rem;
+  margin-left: 8px;
+  z-index: 100;
+}
+
+.modal_loader {
+  display: flex; /* Set this div as a flex container */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+  align-items: center; /* Vertically centers the child items */
+  justify-content: center; /* Horizontally centers the child items */
+}
+
+.loader_title {
+  position: absolute;
+  color: white;
+  font-size: 2.2rem;
+  top: 40%;
+}
+
+.loader {
+  border: 16px solid #f3f3f3;
+  border-top: 16px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

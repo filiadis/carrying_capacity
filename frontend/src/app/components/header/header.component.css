@@ -1,0 +1,18 @@
+.header {
+  position: fixed;
+  background-color: rgb(25, 131, 222);
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  bottom: 95%;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid black;
+}
+
+.header_title {
+  font-size: 1.3rem;
+  color: white;
+}

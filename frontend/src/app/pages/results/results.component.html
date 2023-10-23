@@ -1,0 +1,106 @@
+<app-header name="Συνολικά αποτελέσματα" />
+
+<app-backward-btn (btnClick)="goBack()" />
+<app-reset-btn /><br /><br />
+
+<app-pdf-export />
+
+<div class="container" id="contentToConvert">
+  <!-- Create table for Dimos -->
+  <h3>
+    Δήμος {{ dimos$ | async }} (Επίπεδο:
+    <span [ngStyle]="{ color: getRowColor(dimosState) }">
+      {{ dimosState }} </span
+    >)
+  </h3>
+
+  <table
+    mat-table
+    [dataSource]="dimosTotal | sort : 'key'"
+    class="mat-elevation-z8"
+  >
+    <ng-container matColumnDef="key">
+      <th mat-header-cell *matHeaderCellDef class="key-column">
+        <span class="column_header">Δείκτης</span>
+      </th>
+      <td mat-cell *matCellDef="let row" class="key-column">{{ row.key }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="value">
+      <th mat-header-cell *matHeaderCellDef>
+        <span class="column_header">Επίπεδο</span>
+      </th>
+      <td
+        mat-cell
+        *matCellDef="let row"
+        [ngStyle]="{ color: getRowColor(row.value) }"
+      >
+        {{ row.value }}
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="['key', 'value']"></tr>
+    <tr mat-row *matRowDef="let row; columns: ['key', 'value']"></tr>
+  </table>
+  <br /><br />
+
+  <!-- Create table for Dimotikes enotites -->
+  <div *ngFor="let item of dimenTotal" class="table-container">
+    <h3>
+      Δημοτική ενότητα {{ item.keyName }} (Επίπεδο:
+      <span [ngStyle]="{ color: getRowColor(dimenState[item.keyName]) }">
+        {{ dimenState[item.keyName] }} </span
+      >)
+    </h3>
+
+    <table
+      mat-table
+      [dataSource]="item.data | sort : 'key'"
+      class="mat-elevation-z8"
+    >
+      <ng-container matColumnDef="index">
+        <th mat-header-cell *matHeaderCellDef class="key-column">
+          <span class="column_header">Δείκτης</span>
+        </th>
+        <td mat-cell *matCellDef="let row">{{ row.key }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="value">
+        <th mat-header-cell *matHeaderCellDef>
+          <span class="column_header">Τιμή</span>
+        </th>
+        <td mat-cell *matCellDef="let row">{{ row.value[0] }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="weight">
+        <th mat-header-cell *matHeaderCellDef>
+          <span class="column_header">Βάρος</span>
+        </th>
+        <td mat-cell *matCellDef="let row">{{ row.value[1] }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="state">
+        <th mat-header-cell *matHeaderCellDef>
+          <span class="column_header">Επίπεδο</span>
+        </th>
+        <td
+          mat-cell
+          *matCellDef="let row"
+          [ngStyle]="{ color: getRowColor(row.value[2]) }"
+        >
+          {{ row.value[2] }}
+        </td>
+      </ng-container>
+
+      <tr
+        mat-header-row
+        *matHeaderRowDef="['index', 'value', 'weight', 'state']"
+      ></tr>
+      <tr
+        mat-row
+        *matRowDef="let row; columns: ['index', 'value', 'weight', 'state']"
+      ></tr>
+    </table>
+    <br /><br />
+  </div>
+</div>

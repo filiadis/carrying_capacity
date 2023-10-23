@@ -1,0 +1,11 @@
+.btn {
+  position: fixed;
+  top: 1%;
+  bottom: 95%;
+  right: 1%;
+  width: 180px;
+  height: 3%;
+  font-size: 0.8rem;
+  margin-left: 8px;
+  z-index: 100;
+}

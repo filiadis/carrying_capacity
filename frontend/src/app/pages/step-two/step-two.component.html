@@ -1,0 +1,10 @@
+<app-header name="Βήμα 2ο (Επιλέξτε τα θεματικά επίπεδα που σας ενδιαφέρουν)" />
+<app-backward-btn (btnClick)="goBack()" />
+<app-reset-btn />
+<app-forward-btn
+  btnName="Συνέχεια"
+  [isDisabled]="areAllUnchecked()"
+  (btnClick)="goFront()"
+/>
+
+<app-themes />

@@ -1,0 +1,9 @@
+<app-header name="Βήμα 1ο (Επιλέξτε έναν Δήμο από τον χάρτη)" />
+<app-backward-btn (btnClick)="goBack()" />
+<app-reset-btn />
+<app-forward-btn
+  [isDisabled]="(dimos$ | async) === ''"
+  (btnClick)="goFront()"
+/>
+
+<app-map />

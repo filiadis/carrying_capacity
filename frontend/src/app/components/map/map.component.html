@@ -1,0 +1,17 @@
+<div id="map"></div>
+
+<div class="output">
+  <mat-label class="lb_title">Επιλεγμένος Δήμος:</mat-label><br />
+  <mat-label *ngIf="!loading" class="dim_selected">{{
+    dimos$ | async
+  }}</mat-label
+  ><br />
+  <mat-label class="lb_title">Δημοτικές ενότητες</mat-label><br />
+  <div *ngFor="let item of dimen$ | async">
+    <mat-label class="dimen_selected">{{ item }}</mat-label>
+  </div>
+</div>
+
+<div class="spinner" *ngIf="loading">
+  <mat-spinner diameter="50"></mat-spinner>
+</div>

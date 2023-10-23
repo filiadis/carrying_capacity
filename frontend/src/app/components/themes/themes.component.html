@@ -1,0 +1,17 @@
+<div class="dimEn">
+  <mat-label class="title">Επιλέξτε Δημοτικές Ενότητες</mat-label><br />
+  <div *ngFor="let item of dimen$ | async">
+    <mat-checkbox (change)="dimenValue($event, item)">
+      <span class="checkbox-label">{{ item }}</span>
+    </mat-checkbox>
+  </div>
+</div>
+
+<div class="theme_layers">
+  <mat-label class="title">Επιλέξτε Θεματικά επίπεδα</mat-label><br />
+  <div *ngFor="let item of themes$ | async">
+    <mat-checkbox color="primary" (change)="themeValue($event, item)">
+      <span class="checkbox-label">{{ item }}</span>
+    </mat-checkbox>
+  </div>
+</div>

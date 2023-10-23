@@ -1,0 +1,33 @@
+<app-header
+  name="Βήμα 3ο (Εισάγετε τα στοιχεία για τους αντίστοιχους δείκτες)"
+/>
+<app-backward-btn (btnClick)="goBack()" />
+<app-reset-btn />
+
+<app-submit-btn></app-submit-btn>
+
+<div class="tabs">
+  <mat-tab-group (selectedTabChange)="onTabChanged($event)">
+    <mat-tab
+      *ngFor="let item of dimenSelected$ | async; let i = index"
+      [label]="item"
+      >&nbsp;
+      <span class="tab_title" [class.hidden]="i !== activeTabIndex">
+        Δημοτική Ενότητα {{ item }}</span
+      >
+      <!-- Display the tabsInfo data for this tab -->
+      <div *ngIf="tabsInfo && tabsInfo[item]">
+        &nbsp;
+        <label class="info"
+          ><span>Εκτάρια (Ha):</span>
+          {{ tabsInfo[item]["Εκτάρια (Ha)"] | number : "1.2-2" }},
+          <span>Χαρακτήρας:</span> {{ tabsInfo[item]["Χαρακτήρας"] }},
+          <span>Μόνιμος Πληθυσμός 2021:</span>
+          {{ tabsInfo[item]["Μόνιμος Πληθυσμός 2021"] | number }}</label
+        >
+      </div>
+      <app-composite-index [class.hidden]="i !== activeTabIndex" />
+    </mat-tab>
+  </mat-tab-group>
+</div>
+<br />

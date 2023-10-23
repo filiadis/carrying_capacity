@@ -1,0 +1,10 @@
+<button mat-raised-button class="btn" (click)="onBtnClick()">
+  Υποβολή
+  <mat-icon class="check_label">build</mat-icon>
+</button>
+
+<div class="modal_loader" *ngIf="isLoading">
+  <label class="loader_title">Επεξεργασία των δεδομένων</label>
+
+  <div class="loader"></div>
+</div>

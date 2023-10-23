@@ -1,0 +1,60 @@
+<mat-card class="container">
+  <mat-card-header class="title"> {{ deiktis }}</mat-card-header>
+  <mat-card-content class="mat_content">
+    <div class="tabs" id="save">
+      <button
+        mat-raised-button
+        [color]="btnDisabled ? 'primary' : 'accent'"
+        (click)="save()"
+      >
+        {{ btnDisabled ? "Εισαγωγή" : "Αποθήκευση" }}
+      </button>
+    </div>
+
+    <div class="index_values" id="deiktis">
+      <mat-form-field appearance="fill">
+        <input
+          type="number"
+          matInput
+          [(ngModel)]="onomastisValue"
+          placeholder="{{ onomastis }}"
+          [disabled]="btnDisabled"
+        />
+      </mat-form-field>
+
+      <span style="font-size: 1.4rem">/</span>
+
+      <mat-form-field appearance="fill">
+        <input
+          type="number"
+          matInput
+          [(ngModel)]="paronomastisValue"
+          placeholder="{{ paronomastis }}"
+          [disabled]="btnDisabled"
+        />
+      </mat-form-field>
+    </div>
+
+    <div class="tabs" id="varos">
+      <mat-form-field appearance="fill">
+        <mat-label>Επιλέξτε βάρος</mat-label>
+        <mat-select [(value)]="weightValue" [disabled]="btnDisabled">
+          <mat-option *ngFor="let weight of weights" [value]="weight.value">
+            {{ weight.viewValue }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+    <div class="tabs" id="oria">
+      <mat-label
+        ><span style="font-weight: bold">Στόχος - ´Ορια: </span
+        >{{ oria }}</mat-label
+      >
+    </div>
+
+    <div>
+      <mat-icon class="check_label" *ngIf="saveSuccess">check_circle</mat-icon>
+    </div>
+  </mat-card-content>
+</mat-card>

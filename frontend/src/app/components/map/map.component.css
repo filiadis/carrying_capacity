@@ -1,0 +1,44 @@
+#map {
+  position: absolute;
+  top: 5%;
+  bottom: 0%;
+  left: 0%;
+  right: 0%;
+  z-index: 1;
+}
+
+.output {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid black;
+  top: 10%;
+  right: 0.5%;
+  width: 20%;
+  height: 30%;
+  background-color: white;
+  z-index: 150;
+  padding: 10px;
+  text-align: center;
+  overflow: scroll;
+}
+
+.lb_title {
+  font-size: 1.2rem;
+}
+
+.dim_selected {
+  color: rgb(9, 148, 57);
+  font-size: 1.2rem;
+}
+
+.dimen_selected {
+  color: rgb(20, 105, 235);
+}
+
+.spinner {
+  position: absolute;
+  bottom: 2%;
+  left: 0.7%;
+  z-index: 1000;
+}

@@ -1,0 +1,10 @@
+.index {
+  padding: 10px;
+  text-align: center;
+}
+
+.index_title {
+  font-size: 1.4rem;
+  text-align: center;
+  display: flex;
+}

@@ -1,0 +1,72 @@
+<div class="container">
+  <!-- ΘΕΜΑ 1-->
+  <div class="index" *ngIf="theme_1">
+    <label class="index_title">Πληθυσμός</label><br />
+    <app-division-index
+      identifier="1_1"
+      deiktis="1.1. Πυκνότητα πληθυσμού"
+      onomastis="Πληθυσμός"
+      paronomastis="Εκταση (Ha)"
+      oria="100 ατόμων/Ha για τις μη αστικές περιοχές, 100 - 400 ατόμων/Ha για τις αστικές περιοχές"
+    />
+  </div>
+
+  <!-- ΘΕΜΑ 2-->
+  <div class="index" *ngIf="theme_2">
+    <label class="index_title">Δόμηση και Αστικοποιημένη Επιφάνεια</label><br />
+    <app-index
+      identifier="2_1"
+      deiktis="2.1. Συνολική Δομημένη επιφάνεια ανά κάτοικο"
+      oria="50 τ.μ. ανά κάτοικο για τις μη αστικές περιοχές, 100 τ.μ. ανά κάτοικο για τις αστικές"
+    />
+
+    <app-index
+      identifier="2_2"
+      deiktis="2.2. Αστικοποιημένη επιφάνεια"
+      oria="10% για τις μη αστικές περιοχές, 40% για τις αστικές περιοχές"
+    />
+  </div>
+
+  <!-- ΘΕΜΑ 3-->
+  <div class="index" *ngIf="theme_3">
+    <label class="index_title"
+      >Κρίσιμες Υποδομές / Υποδομές Ζωτικής Σημασίας (ΕΥΖΣ)</label
+    ><br />
+    <app-index
+      identifier="3_1"
+      deiktis="3.1. Ετήσια κατανάλωση ενέργειας που αντιστοιχεί σε κάθε μόνιμο κάτοικο ανα μήνα και έτος"
+      oria="Μικρότερη από τον Μ.Ο. της χώρας"
+    />
+  </div>
+
+  <!-- ΘΕΜΑ 4-->
+  <div class="index" *ngIf="theme_4">
+    <label class="index_title">Τοπική Κοινωνία και Οικονομία</label><br />
+    <app-index
+      identifier="4_1"
+      deiktis="4.1. Κατά Κεφαλήν Ακαθάριστο Εγχώριο Προιόν"
+      oria="Μικρότερη από τον Μ.Ο. της χώρας"
+    />
+  </div>
+
+  <!-- ΘΕΜΑ 5-->
+  <div class="index" *ngIf="theme_5">
+    <label class="index_title">Τουρισμός</label><br />
+    <app-index
+      identifier="5_1"
+      deiktis="5.1. Αριθμός τουριστών ανά ημέρα αιχμής / πληθυσμός"
+      oria="0 - 1: Χαμηλός, 1 - 2: Ανεκτός αριθμός τουριστών, >2: Κρίσιμο σημείο υπέρβασης"
+    />
+  </div>
+
+  <!-- ΘΕΜΑ 6-->
+  <div class="index" *ngIf="theme_6">
+    <label class="index_title">Φυσικό Περιβάλλον, τοπίο και Πολιτισμός</label
+    ><br />
+    <app-index
+      identifier="6_1"
+      deiktis="6.1. Ιστορικός - Πολιτιστικός δείκτης (Ποιοτική αξιολόγηση)"
+      oria="Κλίμακα από το 1 (Ελάχιστο) έως το 10 (Μέγιστο)"
+    />
+  </div>
+</div>

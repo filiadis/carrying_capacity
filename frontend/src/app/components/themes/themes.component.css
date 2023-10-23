@@ -1,0 +1,32 @@
+.dimEn {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  left: 0%;
+  right: 50%;
+  top: 5%;
+  bottom: 0%;
+  padding-left: 20%;
+}
+
+.theme_layers {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  left: 50%;
+  right: 0%;
+  top: 5%;
+  bottom: 0%;
+  padding-left: 10%;
+}
+
+.title {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.checkbox-label {
+  font-size: 1.1rem;
+}

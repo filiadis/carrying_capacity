@@ -1,0 +1,38 @@
+.tabs {
+  position: absolute;
+  top: 5%;
+  bottom: 90%;
+  left: 0%;
+  right: 0%;
+}
+
+.tab_title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: rgb(111, 196, 240);
+}
+
+.container {
+  position: absolute;
+  top: 14%;
+  bottom: 0%;
+  left: 0%;
+  right: 0%;
+  z-index: 1;
+  padding: 20px;
+}
+
+.hidden {
+  display: none;
+}
+span {
+  font-weight: bold;
+}
+
+.info {
+  font-size: 1.1rem;
+}
+
+.tab_title {
+  font-size: 1.5rem;
+}
